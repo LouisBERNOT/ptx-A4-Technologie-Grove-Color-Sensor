@@ -123,12 +123,9 @@ namespace A4_Color_Sensor_Grove {
             red_ = maxColor;
             blue_ *= 0.4;
         }
-        basic.showString("R = " + convertToText(Math.round(red_)));
-        basic.showString("G = " + convertToText(Math.round(green_)));
-        basic.showString("B = " + convertToText(Math.round(blue_)));
-        serial.writeNumber(Math.round(red_));
-        serial.writeNumber(Math.round(green_));
-        serial.writeNumber(Math.round(green_));
+        red_ = Math.round(red_);
+        green_ = Math.round(green_);
+        blue_ = Math.round(blue_);
         return [red_, green_, green_];
     }
 }
